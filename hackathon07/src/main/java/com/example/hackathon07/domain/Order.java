@@ -1,9 +1,14 @@
 package com.example.hackathon07.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.ToString;
+import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 
+@Getter
+@ToString
 @Entity
 @Table(name = "Orders")
 public class Order {
@@ -18,7 +23,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(referencedColumnName = "Menu_ID")
     private Menu menu_id;
-
+    @CreatedDate
     @Column(name = "Order_DateTime")
     private LocalDateTime orderDataTime;
 
@@ -29,12 +34,12 @@ public class Order {
     private int orderPreparationStatus;
 
     @Column(name = "Estimated_Preparation_Time")
-    private LocalDateTime orderEstimatedPreparationTime;
+    private int orderEstimatedPreparationTime;
 
-    public Order(Long order_id, User user_id, Menu menuId, LocalDateTime orderDataTime, int orderQuantity, int orderPreparationStatus, LocalDateTime orderEstimatedPreparationTime) {
+    public Order(Long order_id, User user_id, Menu menuId, LocalDateTime orderDataTime, int orderQuantity, int orderPreparationStatus, int orderEstimatedPreparationTime) {
         this.order_id = order_id;
         this.user_id = user_id;
-        this.menuId = menuId;
+        this.menu_id = menu_id;
         this.orderDataTime = orderDataTime;
         this.orderQuantity = orderQuantity;
         this.orderPreparationStatus = orderPreparationStatus;
