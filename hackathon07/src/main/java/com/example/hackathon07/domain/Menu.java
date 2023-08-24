@@ -1,9 +1,13 @@
 package com.example.hackathon07.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import java.time.LocalDateTime;
-
+@Setter
+@Getter
+@ToString
 @Entity
 @Table(name = "Menu_Items")
 public class Menu {
@@ -13,7 +17,7 @@ public class Menu {
 
     @OneToMany
     @JoinColumn(referencedColumnName = "Menu_Section_Id")
-    private MenuSection menuSectionId;
+    private MenuSection menu_section_id;
 
     @Column(name = "Menu_Name")
     private String menuName;
@@ -31,48 +35,16 @@ public class Menu {
     private String menuPrice;
 
     @Column(name = "Menu_Tag_ID")
-    private int menuTagId;
+    private int menu_tag_id;
 
-    public Menu(Long menu_id, MenuSection menuSectionId, String menuName, String menuDescription, String menuPhotoUrl, float menuStarRating, String menuPrice, int menuTagId) {
-        this.menu_id = menu_id;
-        this.menuSectionId = menuSectionId;
-        this.menuName = menuName;
-        this.menuDescription = menuDescription;
-        this.menuPhotoUrl = menuPhotoUrl;
-        this.menuStarRating = menuStarRating;
-        this.menuPrice = menuPrice;
-        this.menuTagId = menuTagId;
-    }
-
-    public Long getMenu_id() {
-        return menu_id;
-    }
-
-    public MenuSection getMenuSectionId() {
-        return menuSectionId;
-    }
-
-    public String getMenuName() {
-        return menuName;
-    }
-
-    public String getMenuDescription() {
-        return menuDescription;
-    }
-
-    public String getMenuPhotoUrl() {
-        return menuPhotoUrl;
-    }
-
-    public float getMenuStarRating() {
-        return menuStarRating;
-    }
-
-    public String getMenuPrice() {
-        return menuPrice;
-    }
-
-    public int getMenuTagId() {
-        return menuTagId;
-    }
+//    public Menu(Long menu_id, MenuSection menu_section_id, String menuName, String menuDescription, String menuPhotoUrl, float menuStarRating, String menuPrice, int menu_tag_id) {
+//        this.menu_id = menu_id;
+//        this.menu_section_id = menu_section_id;
+//        this.menuName = menuName;
+//        this.menuDescription = menuDescription;
+//        this.menuPhotoUrl = menuPhotoUrl;
+//        this.menuStarRating = menuStarRating;
+//        this.menuPrice = menuPrice;
+//        this.menu_tag_id = menu_tag_id;
+//    }
 }
