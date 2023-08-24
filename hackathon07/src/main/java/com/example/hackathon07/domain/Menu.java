@@ -43,4 +43,36 @@ public class Menu {
         this.menuPrice = menuPrice;
         this.menuTagId = menuTagId;
     }
+
+    public Long getMenu_id() {
+        return menu_id;
+    }
+
+    public MenuSection getMenuSectionId() {
+        return menuSectionId;
+    }
+
+    public String getMenuName() {
+        return menuName;
+    }
+
+    public String getMenuDescription() {
+        return menuDescription;
+    }
+
+    public String getMenuPhotoUrl() {
+        return menuPhotoUrl;
+    }
+
+    public float getMenuStarRating() {
+        return menuStarRating;
+    }
+
+    public String getMenuPrice() {
+        return menuPrice;
+    }
+
+    public int getMenuTagId() {
+        return menuTagId;
+    }
 }
