@@ -35,7 +35,7 @@ public class ReviewRequestDTO {
                     .reviewContent(content)
                     .reviewStatus(reviewStatus)
                     .build();
-
+        
     }
 
 }
