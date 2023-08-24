@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>덕스러운 학식생활</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+  <style>
+        * {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            overflow: scroll;
+            background-color: #FFFDF9;
+        }
+
+        .title {
+            font-size: 80px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 40px 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .nav-link {
+            font-size: 25px;
+            padding: 10px;
+            color: #773D30;
+            text-decoration-line: none;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            font-size: 25px;
+            background-color: #F6E6E4;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        .people {
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        hr {
+            background: #FB9718;
+            height: 2px;
+            border: 0;
+        }
+
+        article {
+            border: 2px solid color=#FB9718;
+            width: 300px;
+            height: 250px;
+            font-size: 0.8em;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+            background-color: #F6E6E4;
+            border-radius: 5px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .img {
+            border: 2px solid #773D30;
+        }
+
+
+        .submit-btn {
+            color: #BE0D37;
+            font-size: 20px;
+            background-color: #F6E6E4;
+            margin-bottom: 30px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 30%;
+        }
+
+    .login {
+      width: 350px;
+      border: 1px solid ;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 0 auto;
+      color: #773D30;
+    }
+
+    .text-field {
+      font-size: 14px;
+      margin-bottom: 10px;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 10px;
+      width: 90%;
+    }
+
+    .submit-btn {
+      color: #BE0D37;
+      font-size: 26px;
+      background-color: #F6E6E4;
+      margin-bottom: 30px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<a class="title" href="main.html" style="color:#F6E6E4 ;"><strong><span style="color: #BE0D37;"> 덕</span><span
+        style="color: #773D30;">스러운 </span><span style="color: #FB9718;">학식</span><span
+        style="color: #773D30;">생활</span></strong></a>
+</div>
+<div>
+  <hr size="2" noshade style="color: #FB9718;">
+  <nav class="nav justify-content-between">
+    <a class="nav-link" href="cart.html">장바구니</a>
+    <a class="nav-link" href="gift.html">선물</a>
+    <a class="nav-link" href="review.html">리뷰</a>
+    <a class="nav-link" href="now.html">현황</a>
+    <a class="nav-link" href="notice.html">알림</a>
+    <a class="nav-link" href="login.html" style="text-align:right"><strong>Log in</strong></a>
+    <a class="nav-link" href="mypage.html" style="text-align:right"><strong>My Page</strong></a>
+  </nav>
+</div>
+<hr size="2" noshade style="color: #FB9718;">
+
+<header class="py-5">
+
+  <p style="text-align: center; font-size: 40px;"><strong><span style="color: #773D30;">LOGIN</strong></p>
+  <p style="text-align: center; font-size: 20px; color: #773D30;">덕스러운 학식생활에 오신 것을 환영합니다.</p>
+</header>
+<hr style="width:500px;">
+<br>
+<br>
+<div class="login">
+  <header class="py-5">
+    <p style="text-align: center; font-size: 40px;"><strong><span style="color: #773D30;">LOGIN</span></strong></p>
+    <p style="text-align: center; font-size: 20px; color: #773D30;">덕스러운 학식생활에 오신 것을 환영합니다.</p>
+  </header>
+  <hr style="width:500px;">
+  <br>
+  <br>
+  <div class="login">
+    <!-- action과 method 설정 -->
+    <form action="/login" method="post">
+      <input type="text" name="username" class="text-field" placeholder="ID">
+      <input type="password" name="password" class="text-field" placeholder="Password">
+      <input type="checkbox" id="remember-check">학번/교직원 번호 저장
+      <br>
+      <br>
+      <input type="submit" value="Login" class="submit-btn">
+    </form>
+  </div>
+</div>
+
+</body>
+
+</html>
