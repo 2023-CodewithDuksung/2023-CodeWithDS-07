@@ -1,0 +1,316 @@
+리뷰 리스트 페이지
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title>메뉴상세페이지</title>
+      <style>
+            body {
+                  overflow: scroll;
+                  background-color: #FFFDF9;
+            }
+
+            .title {
+                  font-size: 80px;
+                  text-align: center;
+                  align-items: center;
+                  justify-content: center;
+                  display: flex;
+            }
+
+            .nav-link {
+                  font-size: 18px;
+                  padding: 10px;
+                  color: #372724;
+            }
+
+            .review-box {
+                  border: 1px solid rgba(251, 151, 24, 0.05);
+                  border-radius: 50px;
+                  height: 150px;
+                  text-align: center;
+                  padding: 30px;
+                  background-color: rgba(251, 151, 24, 0.05);
+            }
+
+            .dropdown {
+                  position: relative;
+                  display: inline-block;
+                  text-align: center;
+            }
+
+            .dropbtn_icon {
+                  font-family: 'Material Icons';
+            }
+
+            .dropbtn {
+                  border: 1px solid #FB9718;
+                  border-radius: 15px;
+                  background-color: #FB9718;
+                  font-weight: 400;
+                  color: #372724;
+                  padding: 12px;
+                  width: 250px;
+                  text-align: left;
+                  cursor: pointer;
+                  font-size: 15px;
+            }
+
+            .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  z-index: 1;
+                  /*다른 요소들보다 앞에 배치*/
+                  font-weight: 400;
+                  background-color: rgba(251, 151, 24, 0.05);
+                  min-width: 250px;
+            }
+
+            .dropdown-content a {
+                  display: block;
+                  text-decoration: none;
+                  color: #372724;
+                  font-size: 15px;
+                  padding: 12px 20px;
+            }
+
+            .dropdown-content a:hover {
+                  background-color: rgba(251, 151, 24, 0.05);
+            }
+
+            .dropdown:hover .dropdown-content {
+                  display: block;
+            }
+      </style>
+</head>
+
+<body>
+      <a class="title" href="main.html" style="color:#F6E6E4 ;"><strong><span style="color: #BE0D37;"> 덕</span><span
+                        style="color: #773D30;">스러운 </span><span style="color: #FB9718;">학식</span><span
+                        style="color: #773D30;">생활</span></strong></a>
+      <div>
+            <hr>
+            <nav class="nav justify-content-between">
+                  <a class="nav-link" href="cart.html">장바구니</a>
+                  <a class="nav-link" href="gift.html">선물</a>
+                  <a class="nav-link" href="review.html">리뷰</a>
+                  <a class="nav-link" href="now.html">현황</a>
+                  <a class="nav-link" href="notice.html">알림</a>
+                  <a class="nav-link" href="login.html"><strong>Log in</strong></a>
+                  <a class="nav-link" href="mypage.html"><strong>My Page</strong></a>
+            </nav>
+      </div>
+      <hr>
+
+      <section style="text-align: center; color: #773D30;">
+            <h7>#계란</h7>
+            <h2>김치삼겹살필라프</h2>
+            <!---
+        <div class="starpoint_wrap">
+            <div class="starpoint_box">
+                <label for="starpoint_1" class="label_star" title="0.5"><span class="blind">0.5점</span></label>
+                <label for="starpoint_2" class="label_star" title="1"><span class="blind">1점</span></label>
+                <label for="starpoint_3" class="label_star" title="1.5"><span class="blind">1.5점</span></label>
+                <label for="starpoint_4" class="label_star" title="2"><span class="blind">2점</span></label>
+                <label for="starpoint_5" class="label_star" title="2.5"><span class="blind">2.5점</span></label>
+                <label for="starpoint_6" class="label_star" title="3"><span class="blind">3점</span></label>
+                <label for="starpoint_7" class="label_star" title="3.5"><span class="blind">3.5점</span></label>
+                <label for="starpoint_8" class="label_star" title="4"><span class="blind">4점</span></label>
+                <label for="starpoint_9" class="label_star" title="4.5"><span class="blind">4.5점</span></label>
+                <label for="starpoint_10" class="label_star" title="5"><span class="blind">5점</span></label>
+                <input type="radio" name="starpoint" id="starpoint_1" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_2" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_3" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_4" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_5" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_6" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_7" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_8" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_9" class="star_radio">
+                <input type="radio" name="starpoint" id="starpoint_10" class="star_radio">
+                <span class="starpoint_bg"></span>
+            </div>
+        </div>
+        -->
+            <h7>☆3.5(-명)</h7>
+            <p></p>
+            <h7>김치와 삽겹살이 어우러져 맛있는 필라프! 호불호 없이 무난하게 즐길 수 있는 맛</h7>
+            <br>
+            <h9>Simple is the best!</h9>
+
+            <figure class="figure">
+                  <img src="김치필라프.png" class="figure-img img-fluid rounded" alt="..." width="500" height="300">
+                  <figcaption class="figure-caption">7500원
+                  </figcaption>
+            </figure>
+
+            <div class="num" style="text-align: center;">
+                  <span>수량</span>
+                  <span class="count">
+                        <a href="#" class="minus">-</a>
+                        <span id="result">1</span>
+                        <a href="#" class="plus">+</a>
+                  </span>
+            </div>
+
+            <!--
+        <div class="count-wrap _count" style="text-align: center;" class="justify-content-center">
+          <button type="button" class="minus">-</button>
+          <input type="text" class="inp" value="1" />
+          <button type="button" class="plus">+</button>
+        </div>
+-->
+
+            <br>
+            <br>
+            <div style="text-align: center;">
+
+                  <svg width="300" height="1" viewBox="0 0 300 1" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <line y1="0.5" x2="300" y2="0.5" stroke="#FB9718"></line>
+                  </svg>
+
+                  <div class="dropdown">
+                        <button class="dropbtn">
+                              <span class="dropbtn_icon"></span>
+                              고기들기름파스타 <span id="result">1</span>개 주문하기
+                        </button>
+                        <div class="dropdown-content">
+                              <a href="#" onclick="alert('장바구니 이동');" style="cursor:pointer">장바구니 담기</a>
+                              <a href="#">바로 주문하기</a>
+                        </div>
+                  </div>
+
+
+                  <svg width="300" height="1" viewBox="0 0 300 1" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <line y1="0.5" x2="300" y2="0.5" stroke="#FB9718"></line>
+                  </svg>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
+            <section>
+                  <p style="font-size: 50px;">Review</p>
+
+                  <div class="review-box" style="border: 1px solid #fb9718; border-radius: 50px">
+                        <div style="display:inline-block;vertical-align:top;">
+                              <img src="김치필라프.png" style="width: 200px; height: 150px; object-fit: cover;">
+                        </div>
+                        <div style="display:inline-block;">
+                              <p style="font-size: 15px; color: #773D30; text-align: left;">전*우 1시간 전 ☆3.5</p>
+                              <p style="font-size: 15px; text-align: left; color: #372724;">
+                                    계란이 냉동인 것 같긴한데 그래도 맛있어요! 카카오페이로 결제하면 천원 할인되니까 덕우들 참고해요~
+                              </p>
+
+                        </div>
+                  </div>
+            </section>
+            <br>
+
+            <section>
+                  <div class="review-box" style="border: 1px solid #fb9718; border-radius: 50px">
+                        <div style="display:inline-block;vertical-align:top;">
+                              <img src="김치필라프.png" style="width: 200px; height: 150px; object-fit: cover;">
+                        </div>
+                        <div style="display:inline-block;">
+                              <p style="font-size: 15px; color: #773D30; text-align: left;">전*우 1시간 전 ☆3.5</p>
+                              <p style="font-size: 15px; text-align: left; color: #372724;">
+                                    계란이 냉동인 것 같긴한데 그래도 맛있어요! 카카오페이로 결제하면 천원 할인되니까 덕우들 참고해요~
+                              </p>
+
+                        </div>
+
+                  </div>
+            </section>
+            <br>
+
+            <section>
+
+                  <div class="review-box" style="border: 1px solid #fb9718; border-radius: 50px">
+                        <div style="display:inline-block;vertical-align:top;">
+                              <img src="김치필라프.png" style="width: 200px; height: 150px; object-fit: cover;">
+                        </div>
+                        <div style="display:inline-block;">
+                              <p style="font-size: 15px; color: #773D30; text-align: left;">전*우 1시간 전 ☆3.5</p>
+                              <p style="font-size: 15px; text-align: left; color: #372724;">
+                                    계란이 냉동인 것 같긴한데 그래도 맛있어요! 카카오페이로 결제하면 천원 할인되니까 덕우들 참고해요~
+                              </p>
+
+                        </div>
+                  </div>
+            </section>
+            <br>
+
+            <section>
+
+                  <div class="review-box" style="border: 1px solid #fb9718; border-radius: 50px">
+                        <div style="display:inline-block;vertical-align:top;">
+                              <img src="김치필라프.png" style="width: 200px; height: 150px; object-fit: cover;">
+                        </div>
+                        <div style="display:inline-block;">
+                              <p style="font-size: 15px; color: #773D30; text-align: left;">전*우 1시간 전 ☆3.5</p>
+                              <p style="font-size: 15px; text-align: left; color: #372724;">
+                                    계란이 냉동인 것 같긴한데 그래도 맛있어요! 카카오페이로 결제하면 천원 할인되니까 덕우들 참고해요~
+                              </p>
+                        </div>
+                  </div>
+            </section>
+            <br>
+
+            <section>
+
+                  <div class="review-box" style="border: 1px solid #fb9718; border-radius: 50px">
+                        <div style="display:inline-block;vertical-align:top;">
+                              <img src="assets/김삼필 리뷰1 1.png" style="width: 200px; height: 150px; object-fit: cover;">
+                        </div>
+                        <div style="display:inline-block;">
+                              <p style="font-size: 15px; color: #773D30; text-align: left;">전*우 1시간 전 ☆3.5</p>
+                              <p style="font-size: 15px; text-align: left; color: #372724;">
+                                    계란이 냉동인 것 같긴한데 그래도 맛있어요! 카카오페이로 결제하면 천원 할인되니까 덕우들 참고해요~
+                              </p>
+
+                        </div>
+
+                  </div>
+            </section>
+            <br>
+
+
+
+
+
+
+            <script>
+                  const minusBtn = document.querySelector(".minus");
+                  const plusBtn = document.querySelector(".plus");
+                  const result = document.querySelector("#result");
+                  const amount = document.querySelector("#amount");
+
+                  let quantity = 1; // 초기 수량
+
+                  minusBtn.addEventListener("click", () => {
+                        if (quantity > 1) {
+                              quantity--;
+                              result.textContent = quantity;
+                              amount.textContent = quantity;
+                        }
+                  });
+
+                  plusBtn.addEventListener("click", () => {
+                        quantity++;
+                        result.textContent = quantity;
+                        amount.textContent = quantity;
+                  });
+            </script>
+
+
+
+
+</body>
+
+</html>

@@ -77,5 +77,9 @@ public class Review {
         this.reviewStatus = 1;  // 1은 리뷰가 수정되었음(updated)을 의미함
     }
 
+    // 리뷰 삭제 기능 추가
+    public void delete() {
+        this.reviewStatus = -1; // -1은 delete 이루어진 상태
+    }
 
 }

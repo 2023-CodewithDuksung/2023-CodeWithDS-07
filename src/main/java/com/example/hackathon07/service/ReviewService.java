@@ -22,6 +22,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class ReviewService {
+
     // field
     private final ReviewRepository reviewRepository;
 
@@ -53,6 +54,28 @@ public class ReviewService {
         Review entity = reviewRepository.findById(review_id).orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
         entity.update(params.getMenu_id(), params.getReviewRating(), params.getContent(), params.getReviewEditedDateTime(), params.getReviewStatus());
         return review_id;
+    }
+
+    /**
+     * review 삭제
+     */
+    @Transactional
+    public Long delete(final Long review_id) {
+
+        Review entity = reviewRepository.findById(review_id).orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
+        entity.delete();
+        return review_id;
+    }
+
+    /**
+     * review 상세정보 조회
+     */
+    @Transactional
+    public ReviewResponseDTO findById(final Long review_id) {
+
+        Review entity = reviewRepository.findById(review_id).orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
+        // entity.increaseHits();   // 리뷰 조회수를 증가시킨 후에 리뷰 정보 리턴
+        return new ReviewResponseDTO(entity);
     }
 
 }

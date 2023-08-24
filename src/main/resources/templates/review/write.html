@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- 리뷰 작성 페이지 -->
+
+
+<html lang="en">
+
+<head>
+    <title>덕스러운 학식생활</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Manrope', sans-serif;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            overflow: scroll;
+            background-color: #FFFDF9;
+        }
+
+        .title {
+            font-size: 80px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 40px 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .nav-link {
+            font-size: 25px;
+            padding: 10px;
+            color: #773D30;
+            text-decoration-line: none;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            font-size: 25px;
+            background-color: #F6E6E4;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        .people {
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        hr {
+            background: #FB9718;
+            height: 2px;
+            border: 0;
+        }
+
+        article {
+            border: 2px solid color=#FB9718;
+            width: 300px;
+            height: 250px;
+            font-size: 0.8em;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+            background-color: #F6E6E4;
+            border-radius: 5px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .img {
+            border: 2px solid #773D30;
+        }
+
+
+        .submit-btn {
+            color: #BE0D37;
+            font-size: 20px;
+            background-color: #F6E6E4;
+            margin-bottom: 30px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="title" href="main.html" style="color:#F6E6E4 ;"><strong><span style="color: #BE0D37;"> 덕</span><span
+                style="color: #773D30;">스러운 </span><span style="color: #FB9718;">학식</span><span
+                style="color: #773D30;">생활</span></strong></a>
+    </div>
+    <div>
+        <hr>
+        <nav class="nav justify-content-between">
+            <a class="nav-link" href="cart.html">장바구니</a>
+            <a class="nav-link" href="gift.html">선물</a>
+            <a class="nav-link" href="review.html">리뷰</a>
+            <a class="nav-link" href="now.html">현황</a>
+            <a class="nav-link" href="notice.html">알림</a>
+            <a class="nav-link" href="login.html" style="text-align:right"><strong>Log in</strong></a>
+            <a class="nav-link" href="mypage.html" style="text-align:right"><strong>My Page</strong></a>
+        </nav>
+    </div>
+    <hr>
+
+    <header class="py-5">
+        <h1 style="text-align: center; "><strong><span style="color: #773D30;">리뷰</span></strong></h1>
+        <p style="text-align: center; font-size: 20px; color: #773D30;">덕우들의 솔직후기를 확인하세요.</p>
+    </header>
+    <hr style="width:500px;">
+    </header>
+    <div class="review-form">
+        <h3>리뷰 작성</h3>
+        <form>
+            <label for="menu">메뉴명 :</label>
+            <input type="text" id="menu" name="menu" required><br><br>
+
+            <label for="review">리뷰 내용:</label><br>
+            <textarea id="review" name="review" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="image">이미지 업로드:</label>
+            <input type="file" id="image" name="image"><br><br>
+
+            <button type="submit" value="print" class="submit-btn">리뷰 작성</button>
+        </form>
+    </div>
+    <h3>리뷰 목록</h3>
+    <div class="review-list" id="reviewList">
+        <!-- 기존 리뷰들은 여기에 추가될 것입니다 -->
+    </div>
+    </div><script>
+        // 양식과 리뷰 목록을 참조합니다.
+        const reviewForm = document.querySelector('.review-form form');
+        const reviewList = document.getElementById('reviewList');
+    
+        // 양식 제출에 이벤트 리스너를 추가합니다.
+        reviewForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // 양식 제출을 막고 JavaScript로 제어합니다.
+    
+            // 양식 입력값을 가져옵니다.
+            const menuName = reviewForm.menu.value;
+            const reviewContent = reviewForm.review.value;
+            const uploadedImage = reviewForm.image.files[0]; // 이미지 하나만 선택된다고 가정합니다.
+    
+            // 새로운 리뷰 요소를 만듭니다.
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+    
+            // 리뷰 내용을 생성합니다.
+            reviewElement.innerHTML = `
+                <h4>${menuName} 리뷰</h4>
+                <img src="${URL.createObjectURL(uploadedImage)}" alt="리뷰 이미지" width="150"><br>
+                <p>${reviewContent}</p>
+            `;
+    
+            // 리뷰 요소를 리뷰 목록에 추가합니다.
+            reviewList.appendChild(reviewElement);
+    
+            // 양식 필드를 리셋합니다.
+            reviewForm.reset();
+        });
+    </script>
+    
+</body>
+
+</html>
