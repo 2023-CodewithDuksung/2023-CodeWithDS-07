@@ -22,7 +22,7 @@ public class ReviewPageController {
     /**
      * review 등록 페이지
      */
-    @GetMapping("/write_00")
+    @GetMapping("/write_copy")
     public String openReviewWrite(@RequestParam(required = false) final Long review_id, Model model) {
         model.addAttribute("review_id", review_id);
         return "review/write_00";
