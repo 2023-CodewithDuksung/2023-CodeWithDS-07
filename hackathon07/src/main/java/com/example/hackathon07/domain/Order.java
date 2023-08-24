@@ -17,7 +17,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(referencedColumnName = "Menu_ID")
-    private Menu menuId;
+    private Menu menu_id;
 
     @Column(name = "Order_DateTime")
     private LocalDateTime orderDataTime;
@@ -31,4 +31,13 @@ public class Order {
     @Column(name = "Estimated_Preparation_Time")
     private LocalDateTime orderEstimatedPreparationTime;
 
+    public Order(Long order_id, User user_id, Menu menuId, LocalDateTime orderDataTime, int orderQuantity, int orderPreparationStatus, LocalDateTime orderEstimatedPreparationTime) {
+        this.order_id = order_id;
+        this.user_id = user_id;
+        this.menuId = menuId;
+        this.orderDataTime = orderDataTime;
+        this.orderQuantity = orderQuantity;
+        this.orderPreparationStatus = orderPreparationStatus;
+        this.orderEstimatedPreparationTime = orderEstimatedPreparationTime;
+    }
 }
