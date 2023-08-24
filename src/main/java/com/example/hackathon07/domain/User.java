@@ -1,7 +1,9 @@
 package com.example.hackathon07.domain;
 
+import jakarta.persistence.Entity;
 import org.springframework.data.annotation.Id;
 
+@Entity
 public class User {
     @Id
     private Long user_id;
