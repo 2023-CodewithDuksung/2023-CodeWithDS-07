@@ -37,7 +37,7 @@ public class Order {
     @Column(name = "Estimated_Preparation_Time")
     private int orderEstimatedPreparationTime;
 
-    public Order(Long order_id, User user_id, Menu menuId, LocalDateTime orderDataTime, int orderQuantity, int orderPreparationStatus, int orderEstimatedPreparationTime) {
+    public Order(Long order_id, User user_id, Menu menu_id, LocalDateTime orderDataTime, int orderQuantity, int orderPreparationStatus, int orderEstimatedPreparationTime) {
         this.order_id = order_id;
         this.user_id = user_id;
         this.menu_id = menu_id;

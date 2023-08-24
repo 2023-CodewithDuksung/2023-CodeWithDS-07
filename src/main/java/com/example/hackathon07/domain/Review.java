@@ -7,6 +7,13 @@ import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import java.time.LocalDateTime;
 
 
@@ -14,6 +21,8 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@EntityListeners(AuditingEntityListener.class)
 @Table(name = "Reviews")
 public class Review {
 
@@ -38,11 +47,11 @@ public class Review {
     @Column(name = "Review_Rating")
     private float reviewRating;   // decimal(2,1)
 
-    @Column(name = "Review_Content")
+    @Column(name = "Review_Content", columnDefinition = "TEXT", nullable = false)
     private String reviewContent;   // text type
 
     @CreatedDate
-    @Column(name = "Review_Creation_DateTime")
+    @Column(name = "Review_Creation_DateTime", updatable = false)
     private LocalDateTime reviewCreaionDateTime;  // dateTime type // .now() 사용 여부 논의 필요
 
     @LastModifiedDate
@@ -51,6 +60,7 @@ public class Review {
 
     @Column(name = "Review_Status")
     private int reviewStatus;
+
 
     /**
      * 생성자 메소드

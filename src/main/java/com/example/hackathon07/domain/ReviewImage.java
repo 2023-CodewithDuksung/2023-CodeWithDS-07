@@ -1,15 +1,23 @@
 package com.example.hackathon07.domain;
 
 import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Getter
 @Setter
 @Entity
-@ToString
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "Review_Image")
 public class ReviewImage {
 
@@ -36,11 +44,12 @@ public class ReviewImage {
      * 생성자 메소드
      */
 
-    public ReviewImage(int reviewImageID, Menu menu_id, Review review_id, String reviewImageURL) {
+    public ReviewImage(int review_image_id, Menu menu_id, Review review_id, String reviewImageURL) {
         this.review_image_id = review_image_id;
-        this.menu_id = this.menu_id;
-        this.review_id = this.review_id;
+        this.menu_id = menu_id;
+        this.review_id = review_id;
         this.reviewImageURL = reviewImageURL;
     }
+
 
 }
