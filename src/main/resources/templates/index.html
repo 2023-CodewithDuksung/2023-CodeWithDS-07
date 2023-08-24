@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>덕스러운 학식생활</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap}" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            overflow: scroll;
+            background-color: #FFFDF9;
+        }
+
+        .title {
+            font-size: 80px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 40px 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .nav-link {
+            font-size: 25px;
+            padding: 10px;
+            color: #773D30;
+            text-decoration-line: none;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            font-size: 25px;
+            background-color: #F6E6E4;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        .people {
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        hr {
+            background: #FB9718;
+            height: 2px;
+            border: 0;
+        }
+
+        article {
+            border: 2px solid color=#FB9718;
+            width: 300px;
+            height: 250px;
+            font-size: 0.8em;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+            background-color: #F6E6E4;
+            border-radius: 5px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .img {
+            border: 2px solid #773D30;
+        }
+
+        .nav-link2 {
+            text-decoration: none;
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+            border: 1px solid #FB9718;
+            display: inline-block;
+            /*인라인요소는 사이즈가 정해져있음 따라서, display:inline-block 혹은 block해야함*/
+            margin: 5px 50px;
+            text-align: center;
+            line-height: 40px;
+            background: #fd978a;
+            color: #773D30;
+            /*글씨색*/
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<a class="title" th:href="@{index.html}"><strong><span style="color: #BE0D37;"> 덕</span><span style="color: #773D30;">스러운
+            </span><span style="color: #FB9718;">학식</span><span style="color: #773D30;">생활</span></strong></a>
+
+<div>
+    <hr>
+    <nav class="nav">
+        <a class="nav-link" href="cart.html"><stong>장바구니</stong></a>
+        <a class="nav-link" href="gift.html"><stong>선물</stong></a>
+        <a class="nav-link" href="review.html"><stong>리뷰</stong></a>
+        <a class="nav-link" href="now.html"><stong>현황</stong></a>
+        <a class="nav-link" href="notice.html"><stong>알림</stong></a>
+        <a class="nav-link" href="login.html"><strong>Log out</strong></a>
+    </nav>
+</div>
+<hr>
+
+<header class="py-5">
+    <h1 style="text-align: center; "><strong><span style="color: #773D30;">오늘의 </span><span
+            style="color: #FB9718;">냠냠</span></strong></h1>
+</header>
+<div class="lay1">
+    <article><a href="menu.html" style="color: #773D30;">
+        <h2> 월요일 메뉴</h2>
+        <img src="mon.jpg" alt="" width="100" height="100">
+        <h3>돼지고기감자짜글이</h3>
+        <h3>6500원</h3>
+    </a></article>
+    </article>
+    <article><a href="menu.html" style="color: #773D30;">
+        <h2>화요일 메뉴</h2>
+        <img src="tue.jpg" alt="" width="100" height="100">
+        <h3>시원한 열무 물국수</h3>
+        <h3>7500원</h3>
+    </a>
+    </article>
+    <article><a href="menu.html" style="color: #773D30;">
+        <h2> 수요일 메뉴</h2>
+        <img src="wen.jpg" alt="" width="100" height="100">
+        <h3>부대찌개 라면사리</h3>
+        <h3>6500원</h3>
+    </a>
+    </article>
+    <article><a href="menu.html" style="color: #773D30;">
+        <h2> 목요일 메뉴</h2>
+        <img src="tur.jpg" alt="" width="100" height="100">
+        <h3>수제치킨버거</h3>
+        <h3>6500원</h3>
+    </a>
+    </article>
+    <article><a href="menu.html" style="color: #773D30;">
+        <h2> 금요일 메뉴</h2>
+        <img src="fri.jpg" alt="" width="100" height="100">
+        <h3>밀푀유 뚝배기</h3>
+        <h3>6500원</h3>
+    </a>
+    </article>
+</div><br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+
+<nav class="nav">
+    <a class="nav-link2" href="today.html" style="color: #773D30;"><strong>오늘의 메뉴</strong></a>
+    <a class="nav-link2" href="pasta.html" style="color: #773D30;"><strong>파스타</strong></a>
+    <a class="nav-link2" href="ramen.html" style="color: #773D30;"><strong>라멘</strong></a>
+    <a class="nav-link2" href="japan.html" style="color: #773D30;"><strong>일식</strong></a>
+    <a class="nav-link2" href="korea.html" style="color: #773D30;"><strong>한식</strong></a>
+    <a class="nav-link2" href="drink.html" style="color: #773D30;"><strong>음료</strong></a>
+</nav>
+
+<br>
+
+<section>
+    <a class="people" style="color: #773D30; text-align: left;"><strong>현재 학식당 혼잡도 : 여유</strong></a>
+    <a class="people" style="color: #773D30; text-align: right ; display:flex;"><strong>대기자 수 : 3명</strong></a>
+    <a class="people" style="color: #773D30; text-align: right;"><strong>예상 대기 시간 : 5분</strong></a>
+    <br>
+</section>
+</body>
+
+</html>
