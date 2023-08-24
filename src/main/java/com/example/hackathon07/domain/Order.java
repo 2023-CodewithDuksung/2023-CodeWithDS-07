@@ -1,5 +1,5 @@
 package com.example.hackathon07.domain;
 
-public class UserForm {
+public class Order {
 
 }

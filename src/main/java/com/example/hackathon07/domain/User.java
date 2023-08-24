@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 public class User {
     @Id
     private Long user_id;
-    
+
     private String userName;
     private String passwordHash;
     private int studentNumber;
